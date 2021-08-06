@@ -12,13 +12,13 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import tax.taknax.taxcr.GuideBookMod;
-import tax.taknax.taxcr.ModItems;
+import tax.taknax.taxcr.TaxCR;
 import tax.taknax.taxcr.api.RecipeManager;
 import tax.taknax.taxcr.client.gui.GuiCryptexRecipeBook;
 import tax.taknax.taxcr.client.gui.GuiEvents;
 import tax.taknax.taxcr.client.gui.GuiGuideBook;
 import tax.taknax.taxcr.common.proxy.ProxyClient;
+import tax.taknax.taxcr.init.ItemInit;
 
 /**
  * Created by Creysys on 25 Mar 16.
@@ -33,14 +33,14 @@ public class ClientPlayerHandler
 		if (inventory.player.isCreative() || inventory.player.getEntityData().getBoolean("doesntNeedGuideBook"))
 			return true;
 		
-		if (inventory.offHandInventory.contains(ModItems.guideBook))
+		if (inventory.offHandInventory.contains(ItemInit.guideBook))
 		{
 			return true;
 		}
 		
 		for (ItemStack stack : inventory.mainInventory)
 		{
-			if (stack != null && stack.getItem() == ModItems.guideBook)
+			if (stack != null && stack.getItem() == ItemInit.guideBook)
 				return true;
 		}
 		
@@ -113,7 +113,7 @@ public class ClientPlayerHandler
 		}
 		else
 		{
-			player.openGui(GuideBookMod.instance, 0, Minecraft.getMinecraft().world, 0, 0, 0);
+			player.openGui(TaxCR.instance, 0, Minecraft.getMinecraft().world, 0, 0, 0);
 		}
 	}
 }
