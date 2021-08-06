@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import tax.taknax.taxcr.ModItems;
+import tax.taknax.taxcr.init.ItemInit;
 
 @SideOnly(Side.CLIENT)
 @EventBusSubscriber
@@ -149,7 +149,7 @@ public class GuiEvents
 		
 		if (gui instanceof GuiCrafting || gui instanceof GuiInventory)
 		{
-			gui.buttonList.get(0).visible = clientPlayer.inventory.hasItemStack(new ItemStack(ModItems.guideBook));
+			gui.buttonList.get(0).visible = clientPlayer.inventory.hasItemStack(new ItemStack(ItemInit.guideBook));
 		}
 	}
 }

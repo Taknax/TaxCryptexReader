@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import tax.taknax.taxcr.GuideBookMod;
+import tax.taknax.taxcr.TaxCR;
 import tax.taknax.taxcr.api.DrawableRecipe;
 import tax.taknax.taxcr.api.IGuiAccessor;
 import tax.taknax.taxcr.api.RecipeManager;
@@ -271,7 +271,7 @@ public class DrawableRecipeCrafting extends DrawableRecipe
 		
 		if (missing.size() == 0)
 		{
-			GuideBookMod.network.sendToServer(new MessagePutItemsInWorkbench(usedConverted.toArray(new Integer[0])));
+			TaxCR.network.sendToServer(new MessagePutItemsInWorkbench(usedConverted.toArray(new Integer[0])));
 		}
 		else
 		{
