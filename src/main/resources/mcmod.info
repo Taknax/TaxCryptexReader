@@ -1,18 +1,16 @@
 [
-  {
-    "modid": "taxcr",
-    "name": "Tax's Crytex Reader",
-    "description": "Modification aims to craft the Cryptex.",
-    "version": "1.0.0",
-    "credits": "Official port of the amazing GuideBook mod.",
-    "logoFile": "taxcr.png",
-    "mcversion": "1.12.2",
-    "url": "https://www.curseforge.com/minecraft/mc-mods/taxcryptexreader",
-    "updateUrl": "https://www.curseforge.com/minecraft/mc-mods/taxcryptexreader/files",
-    "authorList": ["Creysys, Torojima, Daripher, Taknax"],
-    "dependencies": [],
-    "dependants": [],
-    "requiredMods": [],
-    "useDependencyInformation": "true"
-  }
+{
+  "modid": "taxcr",
+  "name": "Tax's Crytex Reader",
+  "description": "Modification aims to craft the Cryptex.",
+  "version": "2.0",
+  "mcversion": "1.12.2",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/taxcryptexreader",
+  "updateUrl": "https://www.curseforge.com/minecraft/mc-mods/taxcryptexreader/files",
+  "authorList": ["Creysys, Torojima, Anar, EmaMaker, Daripher, Exopandora, Taknax-Bo"],
+  "credits": "Official port of the amazing GuideBook mod",
+  "logoFile": "taxcr.png",
+  "screenshots": [],
+  "dependencies": []
+}
 ]
