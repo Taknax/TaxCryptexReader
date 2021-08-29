@@ -17,7 +17,7 @@ public class ModItems
 	
 	public static void init()
 	{
-		guideBook = new ItemGuideBook("guidebook").setCreativeTab(CreativeTabs.MISC);
+		guideBook = new ItemGuideBook("cryptex").setCreativeTab(CreativeTabs.MISC);
 	}
 	
 	@SubscribeEvent
