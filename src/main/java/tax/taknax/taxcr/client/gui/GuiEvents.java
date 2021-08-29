@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import micdoodle8.mods.galacticraft.api.client.tabs.AbstractTab;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -57,15 +58,16 @@ public class GuiEvents
 			int openedRecipesGuiLeft = recipeBook.updateScreenPosition(inventoryGui.widthTooNarrow, inventoryGui.width, inventoryGui.xSize);
 			
 			for (int i = 0; i < inventoryGui.buttonList.size(); i++)
-				
 			{
-				 GuiButton button = inventoryGui.buttonList.get(i);
-	                
-	                if(button != null)
-	                    if (recipeBook.isVisible())
-	                        button.x = openedRecipesGuiLeft + inventoryButtonsDefaultXPositions.get(i);
-	                    else
-	                        button.x = inventoryGui.guiLeft + inventoryButtonsDefaultXPositions.get(i);
+				GuiButton button = inventoryGui.buttonList.get(i);
+				
+				if (button instanceof AbstractTab)
+				{
+					if (recipeBook.isVisible())
+						button.x = openedRecipesGuiLeft + inventoryButtonsDefaultXPositions.get(i);
+					else
+						button.x = inventoryGui.guiLeft + inventoryButtonsDefaultXPositions.get(i);
+				}
 			}
 		}
 	}
