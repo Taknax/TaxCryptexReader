@@ -19,11 +19,10 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import tax.taknax.taxcr.GuideBookMod;
 import tax.taknax.taxcr.ModItems;
 
-@SideOnly(Side.CLIENT)
-@EventBusSubscriber
+@EventBusSubscriber(modid = GuideBookMod.MODID, value = Side.CLIENT)
 public class GuiEvents
 {
 	private static Map<Integer, Integer> inventoryButtonsDefaultXPositions;
