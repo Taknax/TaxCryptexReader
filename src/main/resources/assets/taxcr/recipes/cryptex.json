@@ -1,0 +1,14 @@
+{
+	"group": "taxcr",
+  	"type": "minecraft:crafting_shapeless",
+  	"ingredients": [
+   		{"item": "minecraft:book"},
+   		{"item": "minecraft:diamond"},
+   		{"item": "minecraft:coal","data": 32767},
+   		{"item": "minecraft:crafting_table"}
+   	],
+  	"result": {
+   		"item": "taxcr:cryptex",
+    	"count": 1
+  	}
+}
