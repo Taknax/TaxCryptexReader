@@ -1,7 +1,11 @@
 package tax.taknax.taxcr.client.gui;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
+import micdoodle8.mods.galacticraft.api.client.tabs.AbstractTab;
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.inventory.GuiCrafting;
@@ -21,6 +25,8 @@ import tax.taknax.taxcr.ModItems;
 @EventBusSubscriber(modid = GuideBookMod.MODID, value = Side.CLIENT)
 public class GuiEvents
 {
+	private static Map<Integer, Integer> inventoryButtonsDefaultXPositions;
+	
 	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void onGuiInit(GuiScreenEvent.InitGuiEvent.Post event)
 	{
@@ -32,6 +38,37 @@ public class GuiEvents
 	{
 		hideBookButton(event.getGui());
 		replaceRecipeBook(event.getGui());
+		
+		if (event.getGui() instanceof GuiInventory)
+		{
+			GuiCryptexRecipeBook recipeBook = getRecipeBookFromGui(event.getGui());
+			GuiInventory inventoryGui = (GuiInventory) event.getGui();
+			
+			if (inventoryButtonsDefaultXPositions == null)
+			{
+				inventoryButtonsDefaultXPositions = new HashMap<>();
+				
+				for (int i = 0; i < inventoryGui.buttonList.size(); i++)
+				{
+					inventoryButtonsDefaultXPositions.put(i, inventoryGui.buttonList.get(i).x - inventoryGui.guiLeft);
+				}
+			}
+			
+			int openedRecipesGuiLeft = recipeBook.updateScreenPosition(inventoryGui.widthTooNarrow, inventoryGui.width, inventoryGui.xSize);
+			
+			for (int i = 0; i < inventoryGui.buttonList.size(); i++)
+			{
+				GuiButton button = inventoryGui.buttonList.get(i);
+				
+				if (button instanceof AbstractTab)
+				{
+					if (recipeBook.isVisible())
+						button.x = openedRecipesGuiLeft + inventoryButtonsDefaultXPositions.get(i);
+					else
+						button.x = inventoryGui.guiLeft + inventoryButtonsDefaultXPositions.get(i);
+				}
+			}
+		}
 	}
 	
 	@SubscribeEvent
@@ -44,8 +81,8 @@ public class GuiEvents
 		{
 			GuiContainer containerGui = (GuiContainer) event.getGui();
 			recipeBook.actualGui.setWorldAndResolution(event.getGui().mc, event.getGui().width, event.getGui().height);
-			recipeBook.actualGui.guiLeft = (event.getGui().width - (GuiGuideBook.bookImageWidth + containerGui.getXSize())) / 2 - 7;
-			recipeBook.actualGui.guiTop = (event.getGui().height - GuiGuideBook.bookImageHeight) / 2 + 15;
+			recipeBook.actualGui.guiLeft = (containerGui.width - (GuiGuideBook.bookImageWidth + containerGui.getXSize())) / 2 - 7;
+			recipeBook.actualGui.guiTop = (containerGui.height - GuiGuideBook.bookImageHeight) / 2 + 15;
 		}
 	}
 	
