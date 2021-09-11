@@ -58,8 +58,8 @@ public class GuideBookMod
     }
     
     public static final String MODID = "taxcr";
-    public static final String NAME = "Tax's Cryptex Reader";
-    public static final String VERSION = "2.0";
+    public static final String NAME = "Tax' Cryptex Reader";
+    public static final String VERSION = "2.0.0";
     
     @Mod.Instance
     public static GuideBookMod instance;
