@@ -1,10 +1,10 @@
 #Keybinds
-key.categories.guidebook=Tax's Cryptex Reader
+key.categories.guidebook=Cryptex Reader
 key.guidebook.recipe=Encrypt recipes
 key.guidebook.usage=Encrypt usages
 
 #Items
-item.guidebook.name=Cryptex
+item.cryptex.name=Cryptex
 
 #Gui
 guidebook.search=Encrypt
