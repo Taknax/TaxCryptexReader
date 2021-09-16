@@ -21,7 +21,7 @@ import tax.taknax.taxcr.common.proxy.ProxyServer;
 import tax.taknax.taxcr.network.message.MessagePutItemsInWorkbench;
 import tax.taknax.taxcr.plugin.vanilla.PluginVanilla;
 
-@Mod(modid = GuideBookMod.MODID, name = GuideBookMod.NAME, version = GuideBookMod.VERSION, acceptedMinecraftVersions = "[1.12.2]")
+@Mod(modid = GuideBookMod.MODID, name = GuideBookMod.NAME, version = GuideBookMod.VERSION, acceptedMinecraftVersions = "[1.12.2]", dependencies = "required-after:taxlc@[1.0.0,);")
 @EventBusSubscriber(modid = GuideBookMod.MODID)
 public class GuideBookMod
 {
