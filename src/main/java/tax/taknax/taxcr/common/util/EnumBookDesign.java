@@ -1,4 +1,4 @@
-package tax.taknax.taxcr.util;
+package tax.taknax.taxcr.common.util;
 
 @SuppressWarnings("unused")
 public enum EnumBookDesign {

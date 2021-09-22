@@ -1,4 +1,4 @@
-package tax.taknax.taxcr.handler;
+package tax.taknax.taxcr.common.handler;
 
 import java.util.Iterator;
 import java.util.List;
@@ -11,7 +11,7 @@ import net.minecraft.client.gui.inventory.GuiInventory;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import tax.taknax.taxcr.client.gui.GuiButtonBook;
-import tax.taknax.taxcr.helper.ReflectionHelper;
+import tax.taknax.taxcr.common.helpers.ReflectionHelper;
 
 public class GuiEventHandler {
 

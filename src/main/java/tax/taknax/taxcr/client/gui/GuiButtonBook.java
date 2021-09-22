@@ -7,8 +7,8 @@ import net.minecraft.client.gui.GuiButtonImage;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 import tax.taknax.taxcr.GuideBookMod;
-import tax.taknax.taxcr.handler.ConfigBuildHandler;
-import tax.taknax.taxcr.util.EnumBookDesign;
+import tax.taknax.taxcr.common.handler.ConfigBuildHandler;
+import tax.taknax.taxcr.common.util.EnumBookDesign;
 
 public class GuiButtonBook extends GuiButtonImage {
 

@@ -26,8 +26,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import tax.taknax.taxcr.api.RecipeManager;
 import tax.taknax.taxcr.client.gui.GuiGuideBook;
 import tax.taknax.taxcr.common.GuiBookContainer;
+import tax.taknax.taxcr.common.handler.GuiEventHandler;
 import tax.taknax.taxcr.common.proxy.ProxyServer;
-import tax.taknax.taxcr.handler.GuiEventHandler;
 import tax.taknax.taxcr.network.message.MessagePutItemsInWorkbench;
 import tax.taknax.taxcr.plugin.vanilla.PluginVanilla;
 

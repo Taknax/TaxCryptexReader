@@ -1,4 +1,4 @@
-package tax.taknax.taxcr.helper;
+package tax.taknax.taxcr.common.helpers;
 
 import net.minecraft.client.gui.GuiButtonImage;
 import net.minecraft.client.gui.inventory.GuiContainer;

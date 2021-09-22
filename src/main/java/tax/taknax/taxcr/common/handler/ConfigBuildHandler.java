@@ -1,7 +1,7 @@
-package tax.taknax.taxcr.handler;
+package tax.taknax.taxcr.common.handler;
 
 import tax.taknax.taxcr.GuideBookMod;
-import tax.taknax.taxcr.util.EnumBookDesign;
+import tax.taknax.taxcr.common.util.EnumBookDesign;
 import net.minecraftforge.common.config.Config;
 
 @Config(modid = GuideBookMod.MODID)
