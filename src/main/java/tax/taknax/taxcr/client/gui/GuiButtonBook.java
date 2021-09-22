@@ -47,7 +47,7 @@ public class GuiButtonBook extends GuiButtonImage {
         if (this.visible) {
 
             this.hovered = mouseX >= this.x && mouseY >= this.y && mouseX < this.x + this.width && mouseY < this.y + this.height;
-            this.bookVisible = mc.player.getRecipeBook().isGuiOpen();
+            this.bookVisible = GuiEvents.getRecipeBookFromGui(mc.currentScreen).isVisible();
 
             EnumBookDesign design = ConfigBuildHandler.bookDesign;
             mc.getTextureManager().bindTexture(BOOK_BUTTON);
