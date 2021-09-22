@@ -56,12 +56,13 @@ public class GuiButtonBook extends GuiButtonImage {
             int posX = 0;
             int posY = design.getId() * 2 * this.height;
 
-            if (this.hovered) {
+            if (this.hovered || this.bookVisible) {
                 this.animationTicks = Math.min(design.getFrames() - 1.0F, this.animationTicks + partialTicks * design.getSpeed());
             } else {
                 this.animationTicks = Math.max(0.0F, this.animationTicks - partialTicks * design.getSpeed());
             }
-
+           	
+            	
             if (this.bookVisible) {
                 posY += this.height;
             }
