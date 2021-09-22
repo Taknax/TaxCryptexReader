@@ -3,12 +3,11 @@ package tax.taknax.taxcr;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.typesafe.config.Config;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -126,9 +125,9 @@ public class GuideBookMod
     @SubscribeEvent
     public static void configChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
 
- //       if (event.getModID().equals(GuideBookMod.MODID)) {
- //       ConfigManager.sync(GuideBookMod.MODID, Config.Type.INSTANCE);
- //       }
+        if (event.getModID().equals(GuideBookMod.MODID)) {
+        ConfigManager.sync(GuideBookMod.MODID, Config.Type.INSTANCE);
+        }
 
     }
 }
