@@ -61,8 +61,7 @@ public class GuiButtonBook extends GuiButtonImage {
             } else {
                 this.animationTicks = Math.max(0.0F, this.animationTicks - partialTicks * design.getSpeed());
             }
-           	
-            	
+           	            	
             if (this.bookVisible) {
                 posY += this.height;
             }
